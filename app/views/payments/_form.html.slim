@@ -1,0 +1,16 @@
+= form_for @payment, html: { class: "form form-horizontal payment" } do |f|
+  .form-group
+    = f.label :pay_date, class: 'control-label'
+    .controls
+      = f.date_select :pay_date, class: 'form-control'
+  .form-group
+    = f.label :payment_kinds_id, class: 'control-label'
+    .controls
+      = f.text_field :payment_kinds_id, class: 'form-control'
+  .form-group
+    = f.label :allowance, class: 'control-label'
+    .controls
+      = f.text_field :allowance, class: 'form-control'
+  = f.submit nil, class: 'btn btn-primary'
+  '
+  = link_to t('.cancel', default: t("helpers.links.cancel")), payments_path, class: 'btn'
