@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20141124063716) do
 
   create_table "payments", force: true do |t|
     t.date     "pay_date"
-    t.integer  "payment_kinds_id"
+    t.integer  "payment_kind_id"
     t.integer  "allowance"
     t.datetime "created_at"
     t.datetime "updated_at"

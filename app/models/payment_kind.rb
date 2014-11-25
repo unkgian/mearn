@@ -2,7 +2,7 @@
 
 # === PaymentKindクラス
 class PaymentKind < ActiveRecord::Base
-  varidates :name, presence: true
-  varidates :tax_flag, presence: true
+  validates :name, presence: true
+  validates :tax_flag, presence: true
   has_many :payment
 end

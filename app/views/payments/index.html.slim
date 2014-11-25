@@ -6,7 +6,7 @@ table class="table table-striped"
     tr
       th= model_class.human_attribute_name(:id)
       th= model_class.human_attribute_name(:pay_date)
-      th= model_class.human_attribute_name(:payment_kinds_id)
+      th= model_class.human_attribute_name(:payment_kind_id)
       th= model_class.human_attribute_name(:allowance)
       th= model_class.human_attribute_name(:created_at)
       th=t '.actions', default: t("helpers.actions")
@@ -15,7 +15,7 @@ table class="table table-striped"
       tr
         td= link_to payment.id, payment_path(payment)
         td= payment.pay_date
-        td= payment.payment_kinds_id
+        td= payment.payment_kind_id
         td= payment.allowance
         td=l payment.created_at
         td

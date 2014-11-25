@@ -26,6 +26,7 @@ class PaymentsController < ApplicationController
   def update
     @payment = Payment.find(params[:id])
     @payment.update(payment_params)
+    redirect_to(action: :index)
   rescue
     flash.now[:alert] = 'なんかちゃうでー'
     render(:edit)
@@ -35,7 +36,7 @@ class PaymentsController < ApplicationController
 
   def payment_params
     params.require(:payment).permit(:pay_date,
-                                    :payment_kinds_id,
+                                    :payment_kind_id,
                                     :allowance)
   end
 end
