@@ -4,6 +4,9 @@ require 'rails_helper'
 
 RSpec.describe PaymentsController, type: :controller do
   let(:payment_1) { create(:payment_1) }
+
+  it { is_expected.to permit(:pay_date, :payment_kind_id, :allowance).for(:create) }
+
   describe 'GET index' do
     before do
       get(:index)
@@ -20,8 +23,6 @@ RSpec.describe PaymentsController, type: :controller do
       it { is_expected.to match_array({}) }
     end
   end
-
-  it { is_expected.to permit(:pay_date, :payment_kind_id, :allowance).for(:create) }
 
   describe 'GET new' do
     before do
