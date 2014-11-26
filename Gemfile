@@ -55,4 +55,5 @@ group :test do
   gem 'shoulda-matchers', '2.7.0', require: false
   gem 'simplecov', '0.9.1', require: false
   gem 'simplecov-rcov', require: false
+  gem 'ci_reporter_rspec', require: false
 end
